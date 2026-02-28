@@ -1,3 +1,4 @@
+<img width="1536" height="1024" alt="ChatGPT Image 2026年2月28日 22_32_54" src="https://github.com/user-attachments/assets/5630d7ef-5ce6-4048-bad5-d9e874f09294" />
 # Name Air 文本编辑器
 
 一个轻量的浏览器文本编辑器（纯 HTML/CSS/JavaScript）。
