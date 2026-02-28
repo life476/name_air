@@ -1,59 +1,35 @@
-README.md
-# Name Air 文本编辑器
-2
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/README.md b/README.md
+index 8f731759a4e3c3d68981ce60d731a96057cac917..24ebd483ddf9b3ce66fb7180ed64698d87dddac0 100644
+--- a/README.md
++++ b/README.md
+@@ -1,2 +1,24 @@
+-# name_air
+-no
++# Name Air 文本编辑器
 +
-3
++一个轻量的浏览器文本编辑器（纯 HTML/CSS/JavaScript）。
 +
-一个轻量的浏览器文本编辑器（纯 HTML/CSS/JavaScript）。
-4
-+
-5
 +## 功能
-6
 +
-7
-+-
- 支持实时编辑文本
-8
-+-
- 显示字符数与行数统计
-9
++- 支持实时编辑文本
++- 显示字符数与行数统计
 +- 自动保存内容到浏览器 `localStorage`
-10
-+-
- 支持调整编辑器字号
-11
-+- 支持下载为 `.txt`
- 文件
-12
-+-
- 支持一键复制全部文本
-13
++- 支持调整编辑器字号
++- 支持下载为 `.txt` 文件
++- 支持一键复制全部文本
 +
-14
 +## 快速开始
-15
 +
-16
-+直接在浏览器打开 `index.html`
- 即可使用。
-17
++直接在浏览器打开 `index.html` 即可使用。
 +
-18
++如果你想通过本地服务运行（推荐）：
 +
-如果你想通过本地服务运行（推荐）：
-19
-+
-20
-+
-```bash
-21
-+
-python3 -m http.server 4173
-22
++```bash
++python3 -m http.server 4173
 +```
-23
 +
-+
-24
 +然后访问：`http://localhost:4173`
+ 
+EOF
+)
