@@ -20,6 +20,19 @@
       </div>
 
       <div class="group">
+        <label for="languageSelect">语言</label>
+        <select id="languageSelect" aria-label="语法高亮语言">
+          <option value="javascript">JavaScript</option>
+          <option value="python">Python</option>
+          <option value="c">C</option>
+          <option value="cpp">C++</option>
+          <option value="csharp">C#</option>
+          <option value="css">CSS</option>
+          <option value="markup">HTML</option>
+        </select>
+      </div>
+
+      <div class="group">
         <button id="newBtn" type="button">新建</button>
         <button id="openBtn" type="button">打开文件</button>
         <button id="downloadBtn" type="button">下载 .txt</button>
@@ -46,12 +59,15 @@
     </section>
 
     <main class="editor-container">
-      <textarea
-        id="editor"
-        placeholder="在这里输入内容..."
-        aria-label="文本编辑区"
-        spellcheck="false"
-      ></textarea>
+      <div class="editor-stack">
+        <pre id="highlightPane" aria-hidden="true"><code id="highlightCode" class="language-javascript"></code></pre>
+        <textarea
+          id="editor"
+          placeholder="在这里输入内容..."
+          aria-label="文本编辑区"
+          spellcheck="false"
+        ></textarea>
+      </div>
     </main>
 
     <footer class="status" aria-live="polite">
