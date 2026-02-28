@@ -1,0 +1,90 @@
+:root {
+  color-scheme: light;
+  --bg: #f6f7fb;
+  --panel: #ffffff;
+  --border: #d9ddea;
+  --text: #1f2430;
+  --subtle: #5f6880;
+  --brand: #2962ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'PingFang SC', 'Microsoft Yahei', system-ui, -apple-system, Segoe UI, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  background: var(--panel);
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#fileName {
+  width: 200px;
+}
+
+input[type='text'],
+button {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 10px;
+  background: #fff;
+  color: var(--text);
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: var(--brand);
+}
+
+.editor-container {
+  flex: 1;
+  padding: 16px;
+}
+
+#editor {
+  width: 100%;
+  height: 100%;
+  min-height: 60vh;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  resize: none;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+  color: var(--text);
+}
+
+.status {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 10px 16px;
+  border-top: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--subtle);
+  font-size: 14px;
+}
