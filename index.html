@@ -21,10 +21,29 @@
 
       <div class="group">
         <button id="newBtn" type="button">新建</button>
+        <button id="openBtn" type="button">打开文件</button>
         <button id="downloadBtn" type="button">下载 .txt</button>
         <button id="copyBtn" type="button">复制全部</button>
+        <button id="toggleThemeBtn" type="button">深色模式</button>
       </div>
     </header>
+
+    <section class="search-panel" aria-label="查找与替换">
+      <div class="group">
+        <label for="findInput">查找</label>
+        <input id="findInput" type="text" placeholder="输入要查找的内容" />
+      </div>
+      <div class="group">
+        <label for="replaceInput">替换为</label>
+        <input id="replaceInput" type="text" placeholder="输入替换内容" />
+      </div>
+      <div class="group">
+        <button id="findNextBtn" type="button">下一个</button>
+        <button id="replaceOneBtn" type="button">替换当前</button>
+        <button id="replaceAllBtn" type="button">全部替换</button>
+      </div>
+      <span id="searchStatus">就绪</span>
+    </section>
 
     <main class="editor-container">
       <textarea
@@ -37,9 +56,13 @@
 
     <footer class="status" aria-live="polite">
       <span id="charCount">字符：0</span>
+      <span id="wordCount">词数：0</span>
       <span id="lineCount">行数：1</span>
-      <span id="saveHint">内容会自动保存在浏览器中</span>
+      <span id="cursorPos">光标：1:1</span>
+      <span id="saveHint">内容会自动保存在浏览器中（快捷键：Ctrl/Cmd+S 下载）</span>
     </footer>
+
+    <input id="fileInput" type="file" accept=".txt,text/plain" hidden />
 
     <script src="app.js"></script>
   </body>
