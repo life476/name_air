@@ -1,4 +1,3 @@
- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
 diff --git a/README.md b/README.md
 index 8f731759a4e3c3d68981ce60d731a96057cac917..24ebd483ddf9b3ce66fb7180ed64698d87dddac0 100644
 --- a/README.md
@@ -30,6 +29,3 @@ index 8f731759a4e3c3d68981ce60d731a96057cac917..24ebd483ddf9b3ce66fb7180ed64698d
 +```
 +
 +然后访问：`http://localhost:4173`
- 
-EOF
-)
