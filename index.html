@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Name Air 文本编辑器</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="toolbar" aria-label="编辑器工具栏">
+      <div class="group">
+        <label for="fileName">文件名</label>
+        <input id="fileName" type="text" value="untitled.txt" />
+      </div>
+
+      <div class="group">
+        <label for="fontSize">字号</label>
+        <input id="fontSize" type="range" min="12" max="28" step="1" value="16" />
+        <span id="fontSizeValue">16px</span>
+      </div>
+
+      <div class="group">
+        <button id="newBtn" type="button">新建</button>
+        <button id="downloadBtn" type="button">下载 .txt</button>
+        <button id="copyBtn" type="button">复制全部</button>
+      </div>
+    </header>
+
+    <main class="editor-container">
+      <textarea
+        id="editor"
+        placeholder="在这里输入内容..."
+        aria-label="文本编辑区"
+        spellcheck="false"
+      ></textarea>
+    </main>
+
+    <footer class="status" aria-live="polite">
+      <span id="charCount">字符：0</span>
+      <span id="lineCount">行数：1</span>
+      <span id="saveHint">内容会自动保存在浏览器中</span>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
