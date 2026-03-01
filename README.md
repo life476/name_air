@@ -26,3 +26,5 @@ python3 -m http.server 4173
 ```
 
 然后访问：`http://localhost:4173`
+
+注：此编辑器不可运行代码。
