@@ -1,4 +1,5 @@
 <img width="1536" height="1024" alt="ChatGPT Image 2026年2月28日 22_32_54" src="https://github.com/user-attachments/assets/5630d7ef-5ce6-4048-bad5-d9e874f09294" />
+<img width="1366" height="900" alt="editor-syntax-highlight" src="https://github.com/user-attachments/assets/9ca47a36-878f-4db3-a551-b1ce6fd4c98a" />
 # Name Air 文本编辑器
 
 一个轻量的浏览器文本编辑器（纯 HTML/CSS/JavaScript）。
@@ -23,3 +24,5 @@ python3 -m http.server 4173
 ```
 
 然后访问：`http://localhost:4173`
+
+注：此编辑器不可运行代码。
