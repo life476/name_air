@@ -1,0 +1,10 @@
+echo select disk 1 > %temp%\online.txt
+echo online disk >> %temp%\online.txt
+echo select disk 2 >> %temp%\online.txt
+echo online disk >> %temp%\online.txt
+echo select volume F >> %temp%\online.txt（如果F存在）
+echo assign letter=F >> %temp%\online.txt
+echo select volume G >> %temp%\online.txt
+echo assign letter=G >> %temp%\online.txt
+diskpart /s %temp%\online.txt
+del %temp%\online.txt
