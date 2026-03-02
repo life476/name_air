@@ -1,7 +1,12 @@
-@echo off
-echo select disk 1 > %temp%\online.txt
-echo online disk >> %temp%\online.txt
-echo select disk 2 >> %temp%\online.txt
-echo online disk >> %temp%\online.txt
-diskpart /s %temp%\online.txt
-del %temp%\online.txt
+# 强制联机磁盘1和磁盘2并分配盘符
+try {
+    # 磁盘1联机并分配F
+    Get-Disk -Number 1 | Set-Disk -IsOffline $false
+    Get-Disk -Number 1 | Get-Partition | Where-Object {$_.DriveLetter -eq "F"} | Set-Partition -NewDriveLetter F
+    # 磁盘2联机并分配G  
+    Get-Disk -Number 2 | Set-Disk -IsOffline $false
+    Get-Disk -Number 2 | Get-Partition | Where-Object {$_.DriveLetter -eq "G"} | Set-Partition -NewDriveLetter G
+} catch {
+    # 出错时写入事件日志
+    Write-EventLog -LogName Application -Source "AutoOnline" -EventId 999 -Message $_.Exception.Message
+}
