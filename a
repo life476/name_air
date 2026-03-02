@@ -10,3 +10,4 @@ try {
     # 出错时写入事件日志
     Write-EventLog -LogName Application -Source "AutoOnline" -EventId 999 -Message $_.Exception.Message
 }
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
