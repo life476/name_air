@@ -11,3 +11,4 @@ try {
     Write-EventLog -LogName Application -Source "AutoOnline" -EventId 999 -Message $_.Exception.Message
 }
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
+-WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\Users\你的用户名\Desktop\AutoOnline.ps1"
