@@ -13,3 +13,4 @@ try {
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
 -WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\Users\你的用户名\Desktop\AutoOnline.ps1"
 -Command "Mount-VHD -Path 'D:\你的路径\你的虚拟磁盘文件名.vhdx'"
+-Command "Mount-VHD -Path 'D:\你的路径\你的虚拟磁盘文件名.vhdx'"
