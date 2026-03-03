@@ -95,3 +95,72 @@ public class a {
         System.out.println("Hello World");
     }
 }
+
+
+
+
+public class a {
+    public static void main(String[] args) {
+        a1();
+    }
+    
+    // 维度1: 数字后缀 a1→a2→a3... (1-1000)
+    public static void a1() { a2(); }
+    public static void a2() { a3(); }
+    // ... 中间的方法
+    public static void a999() { a1000(); }
+    public static void a1000() { aa(); }  // 转向维度2
+    
+    // 维度2: 字母组合 aa→ab→ac... (26*26=676种组合)
+    public static void aa() { ab(); }
+    public static void ab() { ac(); }
+    // ... 中间的方法
+    public static void az() { ba(); }
+    public static void ba() { bb(); }
+    // ... 中间的方法
+    public static void zy() { zz(); }
+    public static void zz() { aI(); }  // 转向维度3
+    
+    // 维度3: 罗马数字 aI→aII→aIII... (I=1, II=2, III=3, IV=4, V=5, VI=6, VII=7, VIII=8, IX=9, X=10)
+    public static void aI() { aII(); }
+    public static void aII() { aIII(); }
+    public static void aIII() { aIV(); }
+    public static void aIV() { aV(); }
+    public static void aV() { aVI(); }
+    public static void aVI() { aVII(); }
+    public static void aVII() { aVIII(); }
+    public static void aVIII() { aIX(); }
+    public static void aIX() { aX(); }
+    public static void aX() { aα(); }  // 转向维度4
+    
+    // 维度4: 希腊字母 aα→aβ→aγ... (24个希腊字母)
+    public static void aα() { aβ(); }
+    public static void aβ() { aγ(); }
+    public static void aγ() { aδ(); }
+    public static void aδ() { aε(); }
+    public static void aε() { aζ(); }
+    public static void aζ() { aη(); }
+    public static void aη() { aθ(); }
+    public static void aθ() { aι(); }
+    public static void aι() { aκ(); }
+    public static void aκ() { aλ(); }
+    public static void aλ() { aμ(); }
+    public static void aμ() { aν(); }
+    public static void aν() { aξ(); }
+    public static void aξ() { aο(); }
+    public static void aο() { aπ(); }
+    public static void aπ() { aρ(); }
+    public static void aρ() { aσ(); }
+    public static void aσ() { aτ(); }
+    public static void aτ() { aυ(); }
+    public static void aυ() { aφ(); }
+    public static void aφ() { aχ(); }
+    public static void aχ() { aψ(); }
+    public static void aψ() { aω(); }
+    public static void aω() { a999999(); }  // 最终目标
+    
+    // 最终打印Hello World的方法
+    public static void a999999() {
+        System.out.println("Hello World");
+    }
+}
