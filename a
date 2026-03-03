@@ -164,3 +164,24 @@ public class a {
         System.out.println("Hello World");
     }
 }
+
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C++ 调试",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",  // 👈 改成当前文件所在目录
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:/Users/Administrator/scoop/apps/gcc/current/bin/gdb.exe",
+            "preLaunchTask": "C/C++: g++.exe 生成活动文件"
+        }
+    ]
+}
