@@ -80,3 +80,18 @@ echo.
 echo ========================================
 echo 完成！按任意键退出
 pause >nul
+
+
+
+
+public class a {
+    public static void main(String[] args){b();}
+    // ... a到z ...
+    public static void z(){aa();}
+    public static void aa(){ab();}
+    public static void ab(){ac();}
+    // ... 一直到 zz
+    public static void zz(){
+        System.out.println("Hello World");
+    }
+}
